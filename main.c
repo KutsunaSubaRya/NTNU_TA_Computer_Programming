@@ -147,8 +147,8 @@ int main (void){
     // for(int32_t i=0;i<flagOfIdList;++i){
     //     int32_t flag=0;
     //     printf("Total Point: %d. Five equipment: %d %d %d %d %d.\n",totalPointList[i], idList[i][0][0], idList[i][0][1], idList[i][0][2], idList[i][0][3], idList[i][0][4]);
-    //     for(int32_t j=0;j<5;j++)
-    //         printf("artifact attribute %d: %d %d\n", ++flag, idList[i][1][j], idList[i][2][j]);
+        // for(int32_t j=0;j<5;j++)
+        //     printf("artifact attribute %d: %d %d\n", ++flag, idList[i][1][j], idList[i][2][j]);
     // }
 
     printf("1st Top Total Point: %d. Type of five Artifacts: %d %d %d %d %d.\n",totalPointList[0], idList[0][0][0], idList[0][0][1], idList[0][0][2], idList[0][0][3], idList[0][0][4]);
