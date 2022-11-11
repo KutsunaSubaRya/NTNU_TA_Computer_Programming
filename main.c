@@ -23,11 +23,11 @@ void setUp(int32_t mapType[5][5], int32_t mapID1[5][5], int32_t mapID2[5][5]){
     }
 }
 int32_t calculateTwoPieceSetPoint(int32_t arr[5]){
-    int32_t list[6]={0}, twoPieceSetPoint=0;
+    int32_t list[8]={0}, twoPieceSetPoint=0;
     for(int32_t i=0;i<5;++i){
         ++list[arr[i]];
     }
-    for(int32_t i=1;i<=5;++i){
+    for(int32_t i=1;i<=7;++i){
         if(list[i]>=4 || list[i]<2){
             continue;
         }
@@ -38,11 +38,11 @@ int32_t calculateTwoPieceSetPoint(int32_t arr[5]){
     return twoPieceSetPoint;
 }
 int32_t calculateFourPieceSetPoint(int32_t arr[5]){
-    int32_t list[6]={0}, fourPieceSetPoint=0;
+    int32_t list[8]={0}, fourPieceSetPoint=0;
     for(int32_t i=0;i<5;++i){
         ++list[arr[i]-1];
     }
-    for(int32_t i=1;i<=5;++i){
+    for(int32_t i=1;i<=7;++i){
         if(list[i]>=4){
             fourPieceSetPoint+=fourPieceSetPointList[i];
         }
