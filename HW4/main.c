@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdint.h>
-#include "api.h"
+#include "basic.h"
 int32_t twoPieceSetPointList[8] = {0,10,20,35,50,60,75,100};
 int32_t fourPieceSetPointList[8] = {0,160,150,75,135,125,95,110};
 int32_t attributeIDList[8] = {0,125,100,75,50,50,25,10};
@@ -16,9 +16,9 @@ int32_t idxIdList = 0;
 void setUp(int32_t mapType[5][5], int32_t mapID1[5][5], int32_t mapID2[5][5]){
     for(int i=0;i<5;++i){
         for(int j=0;j<5;++j){
-            mapType[i][j] = getTypeOfAttributeByCoord(i,j);
-            mapID1[i][j] = getIDOfAttributeByCoord1(i,j);
-            mapID2[i][j] = getIDOfAttributeByCoord2(i,j);
+            mapType[i][j] = TypeOfAttribute[i][j];
+            mapID1[i][j] = AttributeID1[i][j];
+            mapID2[i][j] = AttributeID2[i][j];
         }
     }
 }
@@ -154,7 +154,7 @@ int main (void){
     printf("1st Top Total Point: %d. Type of five Artifacts: %d %d %d %d %d.\n",totalPointList[0], idList[0][0][0], idList[0][0][1], idList[0][0][2], idList[0][0][3], idList[0][0][4]);
     printf("2nd Top Total Point: %d. Type of five Artifacts: %d %d %d %d %d.\n",totalPointList[1], idList[1][0][0], idList[1][0][1], idList[1][0][2], idList[1][0][3], idList[1][0][4]);
     printf("3rd Top Total Point: %d. Type of five Artifacts: %d %d %d %d %d.\n",totalPointList[2], idList[2][0][0], idList[2][0][1], idList[2][0][2], idList[2][0][3], idList[2][0][4]);
-    int requiredPoint = getBossRequiringPoint();
+    int requiredPoint = bossPoint;
     printf("Target Boss required point: %d\n",requiredPoint);
     if(totalPointList[2] >= requiredPoint){
         printf("Ready Perfectly!\n");
